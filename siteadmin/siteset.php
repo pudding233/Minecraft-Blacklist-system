@@ -51,9 +51,11 @@ if(isset($_POST['submit'])) {
 	$sitename=daddslashes($_POST['sitename']);
 	$description=daddslashes($_POST['description']);
 	$keywords=daddslashes($_POST['keywords']);
+                $limit=daddslashes($_POST['limit']);
 	saveconfig('sitename',$sitename);
 	saveconfig('description',$description);
 	saveconfig('keywords',$keywords);
+	saveconfig('limit',$limit);
 	showmsg('修改成功！',1);
 }else{
 ?>
@@ -72,6 +74,10 @@ if(isset($_POST['submit'])) {
 			<div class="form-group">
               <label class="col-sm-2 control-label">SEO关键词</label>
               <div class="col-sm-10"><input type="text" name="keywords" value="<?php echo $keywords; ?>" class="form-control" required/></div>
+            </div><br/>
+			<div class="form-group">
+              <label class="col-sm-2 control-label">数据库上限(单位:MB)</label>
+              <div class="col-sm-10"><input type="text" name="limit" value="<?php echo $limit; ?>" class="form-control" required/></div>
             </div><br/>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10"><input type="submit" name="submit" value="修改" class="btn btn-primary form-control"/>
