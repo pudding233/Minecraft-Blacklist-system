@@ -1,6 +1,11 @@
 <?php
 include("./include/common.php");
 ?>
+<?php
+$c=$limit;
+$a =$c * 1024;
+$d = $a / 0.1;
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head>
@@ -55,6 +60,7 @@ $bj .= $str[mt_rand(0, strlen($str)-1)];
 <p class="bg-primary" style="background-color:#FF9900;padding: 3px;"><img border="0" width="32" src="1.gif" />如果是被他人恶意举报，正版UUID被恶意收录，请联系解除</p
 <ul class="list-group">
   <li class="list-group-item"><span class="glyphicon glyphicon-time"></span> <b>现在时间：</b> <?=$date?></li>
+  <li class="list-group-item"></span> <b>黑名单统计：</b> <?=$sum?>/<?php echo $d ?>(当前数据库上限)</li>
 		</ul>
       </div>
 	 <h3 class="form-signin-heading">输入UUID查询</h3>
@@ -93,7 +99,8 @@ $DB->close();
 </div>
 <p style="text-align:center">
 <br><label>其他项目:</label><a href="http://daohang.longyuan.store/" target="_blank">网址导航 </a><label>|</label> <a href="https://ssl.longyuan.store/" target="_blank">自签ssl</a>
-<br></label> <a href="https://longyuan.store/" target="_blank">布丁の基地(博客)</a>
+<br></label> <a href="https://longyuan.store/" target="_blank">布丁の基地(博客)</a><br/>
+<a href="https://space.bilibili.com/22941960" target="_blank">©Translation copyright:stxyvibl</a>
 </p></div>
 </body>
 </html>
