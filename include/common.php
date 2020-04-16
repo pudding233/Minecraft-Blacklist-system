@@ -26,4 +26,5 @@ include ROOT."member.php";
 $keywords=selectconfig("keywords");
 $description=selectconfig("description");
 $sitename=selectconfig("sitename");
+$limit=selectconfig("limit");
 ?>
